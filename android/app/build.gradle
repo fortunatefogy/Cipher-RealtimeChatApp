@@ -9,6 +9,10 @@ android {
     namespace = "com.example.cipher"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

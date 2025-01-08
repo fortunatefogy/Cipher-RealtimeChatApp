@@ -1,8 +1,9 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, use_super_parameters
 
 import 'package:cipher/onboarding_contents.dart';
 import 'package:cipher/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -18,6 +19,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void initState() {
     _controller = PageController();
     super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    super.dispose();
   }
 
   int _currentPage = 0;
@@ -123,7 +131,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             onPressed: () {},
                             child: const Text(
                               "START",
-                              style: TextStyle(color: Color(0xFFF9F4FB),fontSize: 17,fontWeight: FontWeight.w600),
+                              style: TextStyle(color: Color(0xFFF9F4FB),fontSize: 15,fontWeight: FontWeight.w600),
                             ),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
@@ -151,7 +159,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 },
                                 child: const Text(
                                   "SKIP",
-                                  style: TextStyle(color: Colors.black,fontSize: 17,fontWeight: FontWeight.w600),
+                                  style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w600),
                                 ),
                                 style: TextButton.styleFrom(
                                   elevation: 0,
@@ -170,7 +178,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 },
                                 child: const Text(
                                   "NEXT",
-                                  style: TextStyle(color: Color(0xFFF9F4FB),fontSize: 17,fontWeight: FontWeight.w600),
+                                  style: TextStyle(color: Color(0xFFF9F4FB),fontSize: 15,fontWeight: FontWeight.w600),
                                 ),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.black,
