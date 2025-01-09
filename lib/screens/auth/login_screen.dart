@@ -19,8 +19,9 @@ class _LoginScreenState extends State<LoginScreen> {
     super.initState();
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Color(0xffF9F4FB),
-      systemNavigationBarIconBrightness: Brightness.dark,
+      systemNavigationBarIconBrightness: Brightness.light,
     ));
+    
 
     // Start the scale animation
     WidgetsBinding.instance.addPostFrameCallback((_) {

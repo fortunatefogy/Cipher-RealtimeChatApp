@@ -22,14 +22,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.initState();
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Color(0xffF9F4FB),
-      systemNavigationBarIconBrightness: Brightness.dark,
+      systemNavigationBarIconBrightness: Brightness.light,
     ));
   }
 
   @override
   void dispose() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.black,
+      systemNavigationBarColor: Color(0xffF9F4FB),
       systemNavigationBarIconBrightness: Brightness.light,
     ));
     super.dispose();
